@@ -16,5 +16,10 @@ pipeline {
                 sh 'docker build -t cloudmagicmaster/nginx:1.0 .'
             }
         }
+        stage('PushDocker') {
+            steps {
+                sh 'docker push cloudmagicmaster/nginx:1.0'
+            }
+        }
     }
 }
