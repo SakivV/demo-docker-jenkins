@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Hello') {
+        stage('Demo') {
             steps {
-                echo 'Hello World'
+                echo 'This is demo for Docker-Jenkins integration'
             }
         }
     }
