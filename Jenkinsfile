@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Demo') {
-            steps {
-                echo 'This is demo for Docker-Jenkins integration'
-            }
-        }
         stage('VerifyDockerVersion') {
             steps {
                 sh 'docker -v'
@@ -14,6 +9,11 @@ pipeline {
         stage('RunDocker') {
             steps {
                 sh 'docker run hello-world'
+            }
+        }
+        stage('BuildDocker') {
+            steps {
+                sh 'docker build -t cloudmagicmaster/nginx:1.0 .'
             }
         }
     }
