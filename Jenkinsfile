@@ -18,12 +18,12 @@ pipeline {
         }
         stage('PushDocker') {
             steps {
-                sh 'docker push cloudmagicmaster/nginx:1.0'
+                sh 'docker push cloudmagicmaster/nginx:1.1'
             }
         }
         stage('RunDocker') {
             steps {
-                sh 'docker run -p 8989:80 -d cloudmagicmaster/nginx:1.0'
+                sh 'docker run -p 8989:80 -d cloudmagicmaster/nginx:1.1'
             }
         }
     }
