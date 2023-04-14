@@ -21,10 +21,5 @@ pipeline {
                 sh 'docker push cloudmagicmaster/nginx:1.1'
             }
         }
-        stage('RunDockerApp') {
-            steps {
-                sh 'docker run -p 8989:80 -d cloudmagicmaster/nginx:1.1'
-            }
-        }
     }
 }
