@@ -10,7 +10,8 @@
 3. Install below plugin in Jenkins:
    1. docker
    2. docker-compose
-   3. github
+   3. Docker Pipeline
+   4. github
 
 ## Creating Jenkins Pipeline
 1. Refer Jenkinsfile in this repo and as per that you can create your own. I would suggest try simple changes(single stage) for test purpose.
