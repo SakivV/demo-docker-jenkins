@@ -6,19 +6,14 @@ pipeline {
                 sh 'docker -v'
             }
         }
-        stage('RunDocker') {
-            steps {
-                sh 'docker run hello-world'
-            }
-        }
         stage('BuildDocker') {
             steps {
-                sh 'docker build -t cloudmagicmaster/nginx:1.1 .'
+                sh 'docker build -t cloudmagicmaster/nginx:1.2 .'
             }
         }
         stage('PushDocker') {
             steps {
-                sh 'docker push cloudmagicmaster/nginx:1.1'
+                sh 'docker push cloudmagicmaster/nginx:1.2'
             }
         }
     }
