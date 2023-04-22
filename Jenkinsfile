@@ -8,12 +8,12 @@ pipeline {
         }
         stage('BuildDocker') {
             steps {
-                sh 'docker build -t cloudmagicmaster/nginx:1.2 .'
+                sh 'docker build -t cloudmagicmaster/nginx:1.3 .'
             }
         }
         stage('PushDocker') {
             steps {
-                sh 'docker push cloudmagicmaster/nginx:1.2'
+                sh 'docker push cloudmagicmaster/nginx:1.3'
             }
         }
     }
